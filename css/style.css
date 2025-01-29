@@ -1,0 +1,64 @@
+/* Base Styling for Navigation Bar */
+.navbar {
+  background-color: #f8f9fa; /* Light color for the navbar */
+  padding: 1rem;
+  border-bottom: 3px solid #007bff; /* Construction blue theme */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #007bff; /* Blue color for brand name */
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  color: #343a40; /* Dark text color */
+  padding: 0.5rem 1rem;
+}
+
+/* Dropdown */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  background-color: #343a40; /* Dark background for dropdown */
+  border-radius: 5px;
+}
+
+.dropdown-item {
+  color: #ffffff;
+  padding: 0.8rem 1.2rem;
+}
+
+.dropdown-item:hover {
+  background-color: #007bff; /* Highlight on hover */
+}
+
+/* CTA Button */
+.btn-primary {
+  background-color: #007bff; /* Construction blue theme */
+  border: none;
+  margin-right: 10px;
+  color: #333;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .btn-primary {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

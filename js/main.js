@@ -7,3 +7,5 @@ document.addEventListener("DOMContentLoaded", function () {
     easing: "ease-in-out", // Animation easing style
   });
 });
+
+
