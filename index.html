@@ -92,78 +92,133 @@
   </head>
 
   <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Nav Bar Start -->
+    <div class="nav-bar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="./img/about.jpg" alt="Company Logo" width="50" />
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <!-- Logo -->
+          <a href="#" class="navbar-brand">
+            <img src="img/about.jpg" alt="Logo" style="height: 40px" />
+            <!-- Adjust logo height -->
+          </a>
 
-          TRIOSPAN LTD
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Services
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Civil Engineering</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Mechanical Engineering</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Electrical Engineering</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#"
-                    >General Building Solutions</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Careers</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact Us</a>
-            </li>
+          <!-- Toggler Button for Mobile View -->
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <!-- CTA Button -->
-            <li class="nav-item">
-              <a class="btn btn-primary" href="#">Request Consultation</a>
-              <!-- CTA Button -->
-            </li>
-          </ul>
+          <div
+            class="collapse navbar-collapse justify-content-center"
+            id="navbarCollapse"
+          >
+            <!-- Centering the navbar -->
+            <div class="navbar-nav">
+              <a href="index.html" class="nav-item nav-link active">Home</a>
+              <a href="about.html" class="nav-item nav-link">About</a>
+              <a href="service.html" class="nav-item nav-link">Service</a>
+              <a href="team.html" class="nav-item nav-link">Team</a>
+              <a href="portfolio.html" class="nav-item nav-link">Projects</a>
+              <div class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle"
+                  data-toggle="dropdown"
+                  >Pages</a
+                >
+                <div class="dropdown-menu">
+                  <a href="blog.html" class="dropdown-item">Blog Page</a>
+                  <a href="single.html" class="dropdown-item">Single Page</a>
+                </div>
+              </div>
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- Nav Bar End -->
+
+    <!-- Bootstrap Carousel Start -->
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li
+          data-bs-target="#hero-carousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
+        <li data-bs-target="#hero-carousel" data-bs-slide-to="1"></li>
+        <li data-bs-target="#hero-carousel" data-bs-slide-to="2"></li>
+      </ol>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/home-1.jpg" class="d-block w-100" alt="Slide 1" />
+          <div class="carousel-caption">
+            <p class="animate__animated animate__fadeInRight">
+              We Are Professional
+            </p>
+            <h1 class="animate__animated animate__fadeInLeft">
+              For Your Dream Project
+            </h1>
+            <a class="btn animate__animated animate__fadeInUp" href="#"
+              >Get A Quote</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/home-2.jpg" class="d-block w-100" alt="Slide 2" />
+          <div class="carousel-caption">
+            <p class="animate__animated animate__fadeInRight">
+              Professional Builders
+            </p>
+            <h1 class="animate__animated animate__fadeInLeft">
+              We Build Your Home
+            </h1>
+            <a class="btn animate__animated animate__fadeInUp" href="#"
+              >Get A Quote</a
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="img/home-3.jpg" class="d-block w-100" alt="Slide 3" />
+          <div class="carousel-caption">
+            <p class="animate__animated animate__fadeInRight">We Are Trusted</p>
+            <h1 class="animate__animated animate__fadeInLeft">
+              For Your Dream Home
+            </h1>
+            <a class="btn animate__animated animate__fadeInUp" href="#"
+              >Get A Quote</a
+            >
+          </div>
         </div>
       </div>
-    </nav>
+
+      <!-- Controls -->
+      <a
+        class="carousel-control-prev"
+        href="#hero-carousel"
+        role="button"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a
+        class="carousel-control-next"
+        href="#hero-carousel"
+        role="button"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+    <!-- Bootstrap Carousel End -->
 
     <!-- JS Libraries -->
 
