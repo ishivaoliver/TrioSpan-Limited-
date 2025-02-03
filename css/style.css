@@ -1,3 +1,4 @@
+/* Reset and Global Styles */
 * {
   padding: 0;
   margin: 0;
@@ -5,7 +6,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* GLOBAL STYLES */
 :root {
   --primary-color: #87bc29;
   --bg-image-center: no-repeat center/cover;
@@ -57,6 +57,7 @@ html {
 
 /* Carousel images */
 .carousel-item img {
+  width: 100%;
   height: 100vh;
   object-fit: cover;
 }
@@ -93,6 +94,15 @@ html {
   font-size: 1.2rem;
   border-radius: 5px;
   animation: fadeIn 1.8s ease-in-out;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel-caption .btn:hover {
+  transform: scale(1.05);
+  background-color: darken(var(--primary-color), 10%);
 }
 
 /* Fade-in animation */
@@ -108,15 +118,60 @@ html {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .carousel-caption {
+    bottom: 15%;
+    max-width: 90%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 2.5rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1.1rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 1rem;
+    padding: 10px 22px;
+  }
+}
+
 @media (max-width: 768px) {
+  .carousel-caption {
+    bottom: 10%;
+  }
+
   .carousel-caption h1 {
     font-size: 2rem;
   }
+
   .carousel-caption p {
     font-size: 1rem;
   }
+
   .carousel-caption .btn {
     font-size: 1rem;
-    padding: 10px 20px;
+    padding: 8px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-caption {
+    bottom: 5%;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1.6rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
+
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 6px 15px;
   }
 }
