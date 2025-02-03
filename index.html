@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Charset and Viewport for responsiveness -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Triospan Limited - Professional building and construction company specializing in high-quality, durable, and innovative solutions."
+    />
+    <meta
+      name="keywords"
+      content="Construction, Building, Architecture, Engineering, Civil Works, Triospan Limited"
+    />
+    <meta name="author" content="Triospan Limited" />
+
+    <!-- Open Graph Meta Tags for social sharing -->
+    <meta
+      property="og:title"
+      content="Triospan Limited - Building Your Dreams"
+    />
+    <meta
+      property="og:description"
+      content="We provide top-notch construction services with quality, durability, and precision."
+    />
+    <meta
+      property="og:image"
+      content="https://www.example.com/images/preview.jpg"
+    />
+    <meta property="og:url" content="https://www.triospanlimited.com" />
+    <meta property="og:type" content="website" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+
+    <!-- Title -->
+    <title>Triospan Limited - Expert Construction Services</title>
+
+    <!-- Bootstrap 5 CSS (from CDN for quick setup) -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+
+    <!-- Font Awesome (for icons like social media, etc.) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <!-- Google Fonts (Optional for better typography) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS (Animate On Scroll for animations as user scrolls) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="navbar">
+      <div class="container">
+        <a class="navbar-brand" href="#">Triospan Limited</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div
+        id="heroCarousel"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./img/carousel-2.jpg"
+              class="d-block w-100"
+              alt="Construction site"
+            />
+            <div class="carousel-caption">
+              <h1>Building Your Dreams with Precision</h1>
+              <p>
+                Triospan Limited offers expert solutions for all construction
+                needs.
+              </p>
+              <a href="#contact" class="btn btn-primary btn-lg">Get In Touch</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/carousel-3.jpg"
+              class="d-block w-100"
+              alt="Modern building"
+            />
+            <div class="carousel-caption">
+              <h1>Innovation in Every Structure</h1>
+              <p>We create durable, high-quality, and innovative buildings.</p>
+              <a href="#contact" class="btn btn-primary btn-lg"
+                >Start Your Project</a
+              >
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/carousel-1.jpg"
+              class="d-block w-100"
+              alt="Engineers planning"
+            />
+            <div class="carousel-caption">
+              <h1>Expert Engineering & Construction</h1>
+              <p>From planning to execution, we ensure perfection.</p>
+              <a href="#contact" class="btn btn-primary btn-lg">Learn More</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./img/House one.jpg"
+              class="d-block w-100"
+              alt="Skyscrapers"
+            />
+            <div class="carousel-caption">
+              <h1>Shaping the Future with Excellence</h1>
+              <p>Your vision, our expertise—together, we build greatness.</p>
+              <a href="#contact" class="btn btn-primary btn-lg">Get a Quote</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS (deferred for better performance) -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    ></script>
+
+    <!-- AOS JS (for animations on scroll) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- Custom JS -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
