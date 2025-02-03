@@ -29,5 +29,21 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Footer js 
+document.addEventListener("DOMContentLoaded", function () {
+  const socialIcons = document.querySelectorAll(".social-icons a");
+
+  socialIcons.forEach((icon) => {
+    icon.addEventListener("mouseenter", function () {
+      this.style.transform = "scale(1.2)";
+    });
+
+    icon.addEventListener("mouseleave", function () {
+      this.style.transform = "scale(1)";
+    });
+  });
+});
+
+
 
 
