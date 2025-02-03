@@ -29,6 +29,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Projects section
+document.addEventListener("DOMContentLoaded", function () {
+  const projects = document.querySelectorAll(".project");
+
+  // Scroll animation effect
+  projects.forEach((project, index) => {
+    project.style.transitionDelay = `${index * 0.1}s`;
+  });
+
+  // Auto-Slide effect
+  let index = 0;
+  function autoSlide() {
+    projects.forEach((project) => project.classList.remove("highlight"));
+    projects[index].classList.add("highlight");
+    index = (index + 1) % projects.length;
+  }
+  setInterval(autoSlide, 3000);
+});
+
+
 // Footer js 
 document.addEventListener("DOMContentLoaded", function () {
   const socialIcons = document.querySelectorAll(".social-icons a");

@@ -376,49 +376,93 @@ html {
   }
 }
 
-/* Project Section Styles */
+/* Projects Section */
 .projects {
-  padding: 80px 0;
-  background-color: #fff;
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
 }
 
+.projects h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Cards */
 .project {
-  background-color: #f9f9f9;
-  border-radius: 10px;
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
 }
 
 .project img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Overlay Effect */
+.project-info {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  transition: bottom 0.3s ease-in-out;
 }
 
 .project h3 {
-  font-size: 20px;
-  margin: 15px 0;
+  margin: 0;
+  font-size: 1.5rem;
 }
 
 .project p {
-  font-size: 14px;
-  color: #777;
+  margin: 5px 0 0;
+  font-size: 1rem;
 }
 
-/* Animation Styles */
-[data-aos="fade-up"] {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+/* Hover Effects */
+.project:hover {
+  transform: scale(1.05);
 }
 
-[data-aos="fade-up"].aos-animate {
-  opacity: 1;
-  transform: translateY(0);
+.project:hover img {
+  transform: scale(1.1);
 }
 
-/* Footer */
+.project:hover .project-info {
+  bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects h2 {
+    font-size: 2rem;
+  }
+}
+
 /* Footer Styles */
 .footer {
   background: #111;
