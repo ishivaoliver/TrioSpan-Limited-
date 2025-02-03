@@ -50,10 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   window.addEventListener("scroll", function () {
     if (window.scrollY > 300) {
-      backToTopButton.style.display = "flex";
-      backToTopButton.style.animation = "fadeIn 0.5s";
+      backToTopButton.classList.add("show");
     } else {
-      backToTopButton.style.display = "none";
+      backToTopButton.classList.remove("show");
     }
   });
 
@@ -64,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
 
 
 
