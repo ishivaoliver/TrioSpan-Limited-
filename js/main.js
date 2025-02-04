@@ -145,6 +145,26 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// For the FAQ section accordion effect
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    item.addEventListener("click", function () {
+      // Close all other open FAQs
+      faqItems.forEach((el) => {
+        if (el !== item) {
+          el.classList.remove("active");
+        }
+      });
+
+      // Toggle the clicked one
+      item.classList.toggle("active");
+    });
+  });
+});
+
+
 
 // Footer js 
 document.addEventListener("DOMContentLoaded", function () {
