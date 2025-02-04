@@ -286,6 +286,8 @@ html {
   transition: transform 0.3s ease;
 }
 
+/* Why choose us sytling  */
+
 /* General Styles for the Services Section */
 .services {
   background-color: #f4f4f4;
@@ -594,6 +596,30 @@ html {
     display: flex;
     justify-content: center;
   }
+}
+
+/* Floating CTA Button */
+.cta-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #87bc29;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 50px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.1);
+}
+
+.cta-button a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
 }
 
 /* Back to Top Button */
