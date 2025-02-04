@@ -66,6 +66,32 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Service section 
+document.addEventListener("DOMContentLoaded", () => {
+  // GSAP Animation for Services Section
+  gsap.from(".service", {
+    opacity: 0,
+    y: 50,
+    duration: 1.2,
+    stagger: 0.2,
+    ease: "power2.out",
+  });
+
+  // Hover Animation Effect
+  const services = document.querySelectorAll(".service");
+
+  services.forEach((service) => {
+    service.addEventListener("mouseenter", () => {
+      gsap.to(service, { scale: 1.05, duration: 0.3 });
+    });
+    service.addEventListener("mouseleave", () => {
+      gsap.to(service, { scale: 1, duration: 0.3 });
+    });
+  });
+});
+
+
+
 
 // Price estimations section
 // Smooth Scroll for 'Get a Quote' button
