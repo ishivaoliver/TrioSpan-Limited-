@@ -107,23 +107,19 @@ document.querySelectorAll('.btn-primary').forEach(btn => {
 });
 
 // Projects section
-document.addEventListener("DOMContentLoaded", function () {
-  const projects = document.querySelectorAll(".project");
-
-  // Scroll animation effect
-  projects.forEach((project, index) => {
-    project.style.transitionDelay = `${index * 0.1}s`;
+// Smooth Scroll for "projects" section
+document.querySelectorAll('.project').forEach((project) => {
+  project.addEventListener('mouseenter', () => {
+    project.style.transform = 'scale(1.08)';
+    project.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
   });
 
-  // Auto-Slide effect
-  let index = 0;
-  function autoSlide() {
-    projects.forEach((project) => project.classList.remove("highlight"));
-    projects[index].classList.add("highlight");
-    index = (index + 1) % projects.length;
-  }
-  setInterval(autoSlide, 3000);
+  project.addEventListener('mouseleave', () => {
+    project.style.transform = 'scale(1)';
+    project.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
+  });
 });
+
 // JS for Sustainability section 
 document.addEventListener("DOMContentLoaded", () => {
   const stats = document.querySelectorAll(".stat-item h4");
