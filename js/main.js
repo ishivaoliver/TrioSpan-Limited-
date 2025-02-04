@@ -100,6 +100,52 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Blogs and insights Section 
+document.addEventListener("DOMContentLoaded", function () {
+  const blogPosts = document.querySelectorAll(".blog-post");
+
+  // Hover effect for blog posts
+  blogPosts.forEach((post) => {
+    post.addEventListener("mouseenter", () => {
+      post.style.transform = "scale(1.05)";
+      post.style.transition = "transform 0.3s ease-out";
+    });
+
+    post.addEventListener("mouseleave", () => {
+      post.style.transform = "scale(1)";
+    });
+  });
+
+  // Scroll animation
+  function revealOnScroll() {
+    blogPosts.forEach((post) => {
+      const postTop = post.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (postTop < windowHeight - 100) {
+        post.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", revealOnScroll);
+  revealOnScroll(); // Trigger on load
+
+  // Auto-Sliding Blog Cards (Futuristic effect)
+  let offset = 0;
+  function autoSlide() {
+    blogPosts.forEach((post, index) => {
+      const direction = index % 2 === 0 ? 1 : -1;
+      post.style.transform = `translateY(${direction * Math.sin(offset) * 10}px)`;
+    });
+    offset += 0.05;
+    requestAnimationFrame(autoSlide);
+  }
+
+  autoSlide();
+});
+
+
+
 // Footer js 
 document.addEventListener("DOMContentLoaded", function () {
   const socialIcons = document.querySelectorAll(".social-icons a");
