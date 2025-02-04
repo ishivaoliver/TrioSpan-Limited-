@@ -421,7 +421,7 @@ html {
   }
 }
 
-/* General Styles for the Services Section */
+/* General Styles for the  Our Services Section */
 .services {
   background-color: #f4f4f4;
   padding: 80px 0;
@@ -508,6 +508,158 @@ html {
   }
   .service p {
     font-size: 14px;
+  }
+}
+
+/* Pricing and Project Estimation Section */
+#pricing {
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Section Title */
+#pricing .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #ff6600, #00ffcc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Pricing Grid */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 15px;
+}
+
+.pricing-card {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(255, 255, 255, 0.2);
+}
+
+/* Neon Glow Hover Effect */
+.pricing-card:hover::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #00ffcc, #ff6600);
+  filter: blur(15px);
+  z-index: -1;
+}
+
+/* Card Title */
+.pricing-card h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Price */
+.pricing-card p {
+  font-size: 1.5rem;
+  color: #00ffcc;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Card List */
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.pricing-card ul li {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-card ul li:before {
+  content: "✔";
+  color: #ff6600;
+  margin-right: 10px;
+}
+
+/* Button */
+.pricing-card .btn-primary {
+  background-color: #ff6600;
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pricing-card .btn-primary:hover {
+  background-color: #00ffcc;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .pricing-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pricing-card {
+    padding: 30px;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-card {
+    padding: 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
   }
 }
 

@@ -66,6 +66,20 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+
+// Price estimations section
+// Smooth Scroll for 'Get a Quote' button
+document.querySelectorAll('.btn-primary').forEach(btn => {
+  btn.addEventListener('click', function (event) {
+    event.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    window.scrollTo({
+      top: target.offsetTop - 50, // Slightly adjust scroll to avoid header overlap
+      behavior: 'smooth',
+    });
+  });
+});
+
 // Projects section
 document.addEventListener("DOMContentLoaded", function () {
   const projects = document.querySelectorAll(".project");
