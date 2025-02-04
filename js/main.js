@@ -98,6 +98,42 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   setInterval(autoSlide, 3000);
 });
+// JS for Sustainability section 
+document.addEventListener("DOMContentLoaded", () => {
+  const stats = document.querySelectorAll(".stat-item h4");
+
+  const animateStats = () => {
+    stats.forEach((stat) => {
+      let target = +stat.textContent.replace("%", "");
+      let count = 0;
+      let speed = 20;
+
+      const updateCount = () => {
+        if (count < target) {
+          count += 1;
+          stat.textContent = `${count}%`;
+          setTimeout(updateCount, speed);
+        } else {
+          stat.textContent = `${target}%`;
+        }
+      };
+
+      updateCount();
+    });
+  };
+
+  // Run animation when section is in viewport
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateStats();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(document.querySelector("#safety"));
+});
 
 
 // Blogs and insights Section 
