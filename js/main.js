@@ -29,6 +29,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Why choose us section 
+document.addEventListener("DOMContentLoaded", function () {
+  const features = document.querySelectorAll(".feature");
+
+  // Add hover effect with dynamic glow color
+  features.forEach((feature) => {
+    feature.addEventListener("mouseenter", () => {
+      const colors = ["cyan", "magenta", "blue", "purple"];
+      let randomColor = colors[Math.floor(Math.random() * colors.length)];
+      feature.style.boxShadow = `0px 0px 20px ${randomColor}`;
+      feature.style.borderColor = randomColor;
+    });
+
+    feature.addEventListener("mouseleave", () => {
+      feature.style.boxShadow = "0px 0px 20px rgba(0, 255, 255, 0.6)";
+      feature.style.borderColor = "rgba(255, 255, 255, 0.2)";
+    });
+  });
+
+  // Scroll reveal animation
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("fade-in");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  document.querySelectorAll(".feature").forEach((feature) => {
+    observer.observe(feature);
+  });
+});
+
 // Projects section
 document.addEventListener("DOMContentLoaded", function () {
   const projects = document.querySelectorAll(".project");

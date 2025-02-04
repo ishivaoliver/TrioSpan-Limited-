@@ -288,6 +288,139 @@ html {
 
 /* Why choose us sytling  */
 
+.why-choose-us {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Adding a futuristic animated background */
+.why-choose-us::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 255, 0.2) 10%,
+    transparent 70%
+  );
+  animation: futuristicBg 8s linear infinite;
+}
+
+@keyframes futuristicBg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Section Title */
+.why-choose-us .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, cyan, magenta);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.5);
+}
+
+/* Feature Cards */
+.feature {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Neon Glow Hover Effect */
+.feature:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.6);
+}
+
+/* Feature Icon */
+.feature-icon {
+  font-size: 3rem;
+  color: cyan;
+  margin-bottom: 15px;
+  text-shadow: 0px 0px 10px rgba(0, 255, 255, 0.8);
+}
+
+/* Feature Title */
+.feature h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* Feature Text */
+.feature p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Glowing Border Animation */
+.feature::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, cyan, magenta);
+  filter: blur(10px);
+  opacity: 0.4;
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-lg-4 {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .why-choose-us {
+    padding: 60px 20px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .feature {
+    width: 100%;
+  }
+}
+
 /* General Styles for the Services Section */
 .services {
   background-color: #f4f4f4;
