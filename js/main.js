@@ -267,6 +267,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// Whatsapp chat button
+// JavaScript to control button visibility based on device type (optional)
+document.addEventListener("DOMContentLoaded", function () {
+  const whatsappButton = document.getElementById("whatsapp-button");
+
+  // Check if the user is on a mobile device (simple check for mobile user agents)
+  if (!navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)) {
+    whatsappButton.style.display = ""; // Hide the button on non-mobile devices
+  }
+});
+
+
 // button back to top
 document.addEventListener("DOMContentLoaded", function () {
   const backToTopButton = document.getElementById("back-to-top");

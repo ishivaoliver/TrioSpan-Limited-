@@ -1650,6 +1650,62 @@ html {
   }
 }
 
+/* Base styles for the floating WhatsApp button */
+#whatsapp-button {
+  position: fixed;
+  left: 20px; /* Distance from the left side of the screen */
+  bottom: 20px; /* Distance from the bottom of the screen */
+  background: linear-gradient(45deg, #25d366, #128c7e); /* WhatsApp Gradient */
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  padding: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Smooth transition */
+  z-index: 1000; /* Keep it above other content */
+}
+
+/* WhatsApp Icon Style */
+.whatsapp-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover effects */
+#whatsapp-button:hover {
+  transform: scale(1.1); /* Button enlarges when hovered */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+
+#whatsapp-button:active {
+  transform: scale(1.05); /* Slight shrink effect when clicked */
+}
+
+/* Animation for the button */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Button animation to pulse */
+#whatsapp-button {
+  animation: pulse 1.5s infinite; /* Pulsing animation */
+}
+
+/* WhatsApp icon animation */
+#whatsapp-button .whatsapp-icon {
+  animation: pulse 1.5s infinite;
+}
+
 /* Floating CTA Button */
 .cta-button {
   position: fixed;
