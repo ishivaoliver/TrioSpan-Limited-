@@ -223,7 +223,32 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Clients 
+// Add smooth scroll and animation effects
+document.addEventListener("DOMContentLoaded", function () {
+  // Animate logos on scroll
+  const clientLogos = document.querySelectorAll(".clients-grid img");
 
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = "translateY(0)";
+        }
+      });
+    },
+    {
+      threshold: 0.5, // Trigger when 50% of the element is visible
+    }
+  );
+
+  clientLogos.forEach((logo) => {
+    logo.style.opacity = 0;
+    logo.style.transform = "translateY(50px)";
+    logo.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+    observer.observe(logo);
+  });
+});
 
 
 

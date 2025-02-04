@@ -1432,6 +1432,91 @@ html {
   }
 }
 
+/* Clients Section - Futuristic Design */
+#clients {
+  padding: 80px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+.clients .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.clients .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.clients .section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #00bcd4;
+  border-radius: 2px;
+}
+
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-grid img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.clients-grid img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 188, 212, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clients-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+  }
+
+  .clients .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  .clients .section-title {
+    font-size: 1.75rem;
+  }
+}
+
 /* Footer Styles */
 .footer {
   background: #111;
@@ -1568,7 +1653,7 @@ html {
 /* Floating CTA Button */
 .cta-button {
   position: fixed;
-  bottom: 20px;
+  bottom: 80px; /* Add more space to the bottom */
   right: 20px;
   background: #87bc29;
   color: white;
@@ -1577,6 +1662,7 @@ html {
   border-radius: 50px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s;
+  z-index: 10; /* Ensure this button is above the back-to-top button */
 }
 
 .cta-button:hover {
@@ -1592,7 +1678,7 @@ html {
 /* Back to Top Button */
 #back-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 20px; /* Keep the spacing from the bottom */
   right: 20px;
   width: 50px;
   height: 50px;
@@ -1602,12 +1688,12 @@ html {
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
-  display: flex; /* Always visible when scrolling */
+  display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
-  z-index: 1000;
+  z-index: 5; /* Ensure this button is below the CTA button */
   opacity: 0;
   visibility: hidden;
 }
