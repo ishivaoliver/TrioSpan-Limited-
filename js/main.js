@@ -8,14 +8,16 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Auto-play carousel faster
 document.addEventListener("DOMContentLoaded", function () {
   let heroCarousel = document.querySelector("#heroCarousel");
   let carousel = new bootstrap.Carousel(heroCarousel, {
-    interval: 3000, // 3 seconds per slide
+    interval: 4000, // Adjust speed (4 seconds per slide)
     ride: "carousel",
+    pause: false, // Ensures continuous sliding
+    wrap: true,
   });
 });
+
 
 // Smooth Scroll Script
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
