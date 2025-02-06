@@ -223,6 +223,43 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// Team Section JavaScript
+document.addEventListener("DOMContentLoaded", function () {
+  const teamMembers = document.querySelectorAll(".team-member");
+
+  // Hover effect for team members
+  teamMembers.forEach((member) => {
+    member.addEventListener("mouseenter", () => {
+      gsap.to(member, {
+        scale: 1.05,
+        boxShadow: "0px 20px 40px rgba(0, 255, 255, 0.4)",
+        duration: 0.3,
+      });
+    });
+
+    member.addEventListener("mouseleave", () => {
+      gsap.to(member, {
+        scale: 1,
+        boxShadow: "0px 10px 30px rgba(0, 0, 0, 0.3)",
+        duration: 0.3,
+      });
+    });
+  });
+
+  // Scroll reveal animation for team members
+  gsap.from(".team-member", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".team",
+      start: "top 80%",
+      toggleActions: "play none none none",
+    },
+  });
+});
+
 // For the FAQ section accordion effect
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".faq-item");
