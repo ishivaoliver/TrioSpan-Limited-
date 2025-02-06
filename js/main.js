@@ -109,18 +109,36 @@ document.querySelectorAll('.btn-primary').forEach(btn => {
 });
 
 // Projects section
-// Smooth Scroll for "projects" section
-document.querySelectorAll('.project').forEach((project) => {
-  project.addEventListener('mouseenter', () => {
-    project.style.transform = 'scale(1.08)';
-    project.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
+document.addEventListener("DOMContentLoaded", function () {
+  gsap.from(".projects h2", {
+    opacity: 0,
+    y: -50,
+    duration: 1,
+    ease: "power2.out",
   });
 
-  project.addEventListener('mouseleave', () => {
-    project.style.transform = 'scale(1)';
-    project.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
+  gsap.from(".project-card", {
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out",
+  });
+
+  // Parallax Effect
+  document.querySelectorAll(".project-card").forEach((card) => {
+    card.addEventListener("mousemove", (e) => {
+      let x = (e.pageX - card.offsetLeft) / 30;
+      let y = (e.pageY - card.offsetTop) / 30;
+      card.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+    });
+
+    card.addEventListener("mouseleave", () => {
+      card.style.transform = "rotateY(0deg) rotateX(0deg)";
+    });
   });
 });
+
 
 // JS for Sustainability section 
 document.addEventListener("DOMContentLoaded", () => {
