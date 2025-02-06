@@ -80,18 +80,39 @@ html {
   max-width: 500px;
   color: white;
   text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8);
-  animation: fadeInText 1.5s ease-in-out;
 }
 
-/* Text Animations */
+.hero-content > * {
+  /* Target direct children of .hero-content */
+  opacity: 0; /* Initially hidden */
+  animation: fadeInText 2s ease-in-out forwards; /* Apply animation to each child */
+}
+
+.hero-content > *:nth-child(1) {
+  /* First child */
+  animation-delay: 0.5s; /* Delay for the first element */
+}
+
+.hero-content > *:nth-child(2) {
+  /* Second child */
+  animation-delay: 1s; /* Delay for the second element */
+}
+
+.hero-content > *:nth-child(3) {
+  /* Third child */
+  animation-delay: 1.5s; /* Delay for the third element */
+}
+
+/* ... and so on for other children */
+
 @keyframes fadeInText {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(-60%); /* Start slightly above its final position */
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-50%); /* Move to the final position */
   }
 }
 
